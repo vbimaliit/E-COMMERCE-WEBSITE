@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TVCatalog>
+    <laptop id="005" retailer="Sony">
+        <image>C:\tomcat-7.0.34\apache-tomcat-7.0.34\webapps\csj\galaxy-s7-leak-render-topic.jpg</image>
+        <name>BRAVIA</name>
+        <condition>New</condition>
+        <price>399</price>
+		<producttype>TVS</producttype>
+        <accessories>
+            <accessory>Wireless Headphone</accessory>
+            <accessory>Headphone</accessory>
+        </accessories>
+    </laptop>
+    <laptop id="006" retailer="LG">
+        <image>Iphone7.jpg</image>
+        <name>SMART</name>
+        <condition>New</condition>
+        <price>899</price>
+		<producttype>TVS</producttype>
+        <accessories>
+            <accessory>Samrtwatch</accessory>
+            <accessory>Wireless Adapter</accessory>
+        </accessories>
+    </laptop>
+</TVCatalog>

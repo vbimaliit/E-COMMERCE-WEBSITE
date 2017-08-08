@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bestdeal.com</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+<script type="text/javascript" language="javascript" >
+function init()
+{
+	completeField = document.getElementById("searchId");
+    completeTable = document.getElementById("complete-table");
+	autoRow       = document.getElementById("auto-row");
+}
+var xml = new XMLHttpRequest();
+function doCompletion()
+{
+	var url = "./AutoCompletion?action=complete&searchId="+searchId.value;
+	//req = initRequest();
+	xml.open("GET", url, true);
+	xml.send();
+	xml.onreadystatechange = callback;
+}
+
+function initRequest()
+{
+	if(window.XMLHttpRequest)
+		{
+		if(navigator.userAgent.indexOf('MSIE') != -1)
+			{
+				isIE = true;
+			}
+		return new XMLHttpRequest();
+		}
+	else if(window.ActiveXObject)
+		{
+			isIE = true;
+			return new ActiveXObject("Microsoft.XMLHTTP");
+		}
+}	
+
+function appendProduct(productName, productId)
+{
+	var row;
+	var col;
+	var linkElement;
+
+	completeTable.style.display = 'table';
+	row  = document.createElement("tr");
+	cell = document.createElement("td");
+	row.appendChild(cell);
+	completeTable.appendChild(row);
+	
+	cell.className = "popupCell";
+	linkElement = document.createElement("a");
+	linkElement.className = "popupItem";
+	
+	linkElement.setAttribute("href", "./ViewProductServlet?differentiator=lookup&id="+productId);
+	linkElement.appendChild(document.createTextNode(productName));
+	cell.appendChild(linkElement);
+}
+
+function parseMessage(responseXML)
+{
+	//no matches returned
+	if(responseXML == null)
+		{
+		return false;		
+		}
+	else{
+		var products = responseXML.getElementsByTagName("products")[0];
+		if(products.childNodes.length > 0 )
+			{
+			completeTable.setAttribute("bordercolor", "black");
+			completeTable.setAttribute("border", "1");
+			
+			for(loop =0; loop < products.childNodes.length; loop++)
+				{
+				var product    = products.childNodes[loop];
+				var productName = product.getElementsByTagName("productName")[0];
+				var productId   = product.getElementsByTagName("id")[0];
+				appendProduct(productName.childNodes[0].nodeValue, productId.childNodes[0].nodeValue);
+				}
+			}
+	}
+}
+function callback()
+{
+	clearTable();
+	if(xml.readyState == 4)
+		{
+		if(xml.status == 200)
+			{
+			 parseMessage(xml.responseXML);
+			}
+		}
+}
+
+function clearTable()
+{
+	if(completeTable.getElementsByTagName("tr").length > 0)
+		{
+		completeTable.style.display = 'none';
+		for( loop = completeTable.childNodes.length -1; loop >= 0; loop --  )
+			{
+			completeTable.removeChild(completeTable.childNodes[loop]);
+			}
+		}
+}
+
+</script>
+
+</head>
+<body  onload="init()">
+<div id="container">
+  <header>
+	<div class="width">
+    		<table border = "0">
+			<col width="200">
+            <col width="500">
+            <col width="300">			
+			<tr>
+			<td> <img src="bestdeal.jpg" alt="Mountain View"  height="100" width="100"> </td>
+			<td><h1>Bestdeal</h1></td>
+			<td>
+			
+			<div name="autofillform" align="right">
+			<input type="text" name="searchId" value="" class="input" id="searchId" onkeyup="doCompletion()"  placeholder="search here ..." style="width:160px; padding:5px; font-size: 16px"/>
+			<div id="auto-row" align="right" width="315 px" >
+			<table id="complete-table" class="gridtable" style="align= right; width:315 px;"></table>
+			</div>
+			</div>
+
+			
+			</td>
+			</tr>
+			</table>
+			
+			
+       	</div>
+    </header>
+    <nav>
+	<div class="width">
+  		  <ul>
+         	  <li class="start"><a href="index.html">Home</a></li>
+				<li> </li>
+               
+          	  	<li><a href="login.html" target="content">Mobiles</a></li>
+				
+				<li><a href="signup.html">Tablets</a></li>
+          	 	
+				<li> <a href="login.html">Laptop</a></li>
+				
+				<li> <a href="login.html">TVs</a></li>
+
+				 <li style = "float:right"> <a href="login.html">cart</a></li>
+				 
+				 <li style = "float:right"> <a href="loginup.html">Login</a></li>
+		  
+		        <li style = "float:right"> <a href="sign.html">Signup</a></li>
+				
+				<li style = "float:right"> <a href="vieworder.html">VeiwOrder</a></li>
+				
+		  </ul>
+	</div>
+    </nav>
+
+    <div id="body" class="width">
+        <section id="content">
+
+	    <article>
+         <h2> Welcome customer </h2>  
+            
+      		</article>
+        </section>
+    	</frameset>
+        <aside class="sidebar">
+
+           <ul>	
+               <li>
+                    <h4><a href="JustDisplay?maker=mobile">Mobile</a></h4>
+                </li>
+                
+                <li>
+                    <h4><a href="JustDisplay?maker=laptops">Laptops</h4>
+
+                </li>
+                
+                <li>
+                    <h4><a href="JustDisplay?maker=tablets">Tablets</h4>
+
+                </li>
+                <li>
+                    <h4><a href="JustDisplay?maker=tv">TVs</h4>
+  
+                </li>
+                <li>
+                    <h4><a href="TrendingServlet">Trending</h4>
+  
+                </li>
+                                
+            </ul>
+		
+        </aside>
+    	<div class="clear"></div>
+    </div>
+    <footer>
+
+        <div class="footer-bottom">
+            <p>&copy; YourSite 2013. <a href="http://zypopwebtemplates.com/">Free CSS Web Templates</a> by ZyPOP</p>
+         </div>
+    </footer>
+</div>
+</body>
+</html>

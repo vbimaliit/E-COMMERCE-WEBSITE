@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileCatalog>
+    <laptop id="003" retailer="Samsung">
+        <image>C:\tomcat-7.0.34\apache-tomcat-7.0.34\webapps\csj\galaxy-s7-leak-render-topic.jpg</image>
+        <name>samsungs7</name>
+        <condition>New</condition>
+        <price>399</price>
+		<producttype>Mobile</producttype>
+        <accessories>
+            <accessory>Wireless Headphone</accessory>
+            <accessory>Headphone</accessory>
+        </accessories>
+    </laptop>
+    <laptop id="004" retailer="Apple">
+        <image>Iphone7.jpg</image>
+        <name>Iphone</name>
+        <condition>New</condition>
+        <price>899</price>
+		<producttype>Mobile</producttype>
+        <accessories>
+            <accessory>Samrtwatch</accessory>
+            <accessory>Wireless Adapter</accessory>
+        </accessories>
+    </laptop>
+</MobileCatalog>

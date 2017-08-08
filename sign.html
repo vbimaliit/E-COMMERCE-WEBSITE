@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bestdeal.com</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<div id="container">
+  <header>
+	<div class="width">
+    		<table border = "0">
+			<col width="200">
+            <col width="500">
+            <col width="300">			
+			<tr>
+			<td> <img src="bestdeal.jpg" alt="Mountain View"  height="100" width="100"> </td>
+			<td><h1>Bestdeal</h1></td>
+			<td><form action="demo_form.asp">
+                      Search: <input type="text" name="searchfield" size="25" style= "background-color: white" ; ></td>
+				</form>	  
+			</tr>
+			</table>
+			
+			
+       	</div>
+    </header>
+    <nav>
+	<div class="width">
+  		  <ul>
+         	  <li class="start"><a href="index.html">Home</a></li>
+				<li> </li>
+               
+          	  	<li><a href="login.html" target="content">Mobiles</a></li>
+				
+				<li><a href="signup.html">Tablets</a></li>
+          	 	
+				<li> <a href="login.html">Laptop</a></li>
+				
+				<li> <a href="login.html">TVs</a></li>
+
+				 <li style = "float:right"> <a href="login.html">cart</a></li>
+				 
+				 <li style = "float:right"> <a href="loginup.html">Login</a></li>
+		  
+		        <li style = "float:right"> <a href="sign.html">Signup</a></li>
+		  </ul>
+	</div>
+    </nav>
+
+    <div id="body" class="width">
+        <section id="content">
+
+	    <article>
+ <form method="get" action="/csj/SignupServlet">
+  <h4>Please provide the required detail and click on submit</h4>
+  <table cellpadding='2' cellspacing='1'>
+    <tr>
+        <td>User-id</td>
+        <td><input type="text" size="30" name="user-id" style= "background-color: white"></input></td>
+    </tr>
+	<tr>
+	<td>Password</td>
+	   <td><input type ="password" size="15" name="password" style= "background-color: white"/></td>
+	</tr>
+	<tr>
+	<td>Confirm Password</td>
+	   <td><input type ="password" size="15" name="confirmpassword" style= "background-color: white"/></td>
+	</tr>
+	<tr>
+	<td>User type</td>
+		<td><input type="radio" name="usertype" value="admin" style= "background-color: white">Admin
+            <input type="radio" name="usertype" value="retailer" style= "background-color: white"> Retailer
+            <input type="radio" name="usertype" value="customer" checked="checked" style= "background-color: white"> Customer
+		</td>
+	</tr>	
+	
+    <tr>
+        <td colspan='2'>
+            <center><input type="submit" value="Submit"style= "background-color: white" /></center>
+        </td>
+    </tr>
+		
+ </table>
+ </form>
+            
+      		</article>
+        </section>
+    	</frameset>
+        <aside class="sidebar">
+
+                     <ul>	
+               <li>
+                    <h4><a href="JustDisplay?maker=mobile">Mobile</a></h4>
+                </li>
+                
+                <li>
+                    <h4><a href="JustDisplay?maker=laptops">Laptops</h4>
+
+                </li>
+                
+                <li>
+                    <h4><a href="JustDisplay?maker=tablets">Tablets</h4>
+
+                </li>
+                <li>
+                    <h4><a href="JustDisplay?maker=tv">TVs</h4>
+  
+                </li>
+                
+                                
+            </ul>
+		
+        </aside>
+    	<div class="clear"></div>
+    </div>
+    <footer>
+
+        <div class="footer-bottom">
+            <p>&copy; YourSite 2013. <a href="http://zypopwebtemplates.com/">Free CSS Web Templates</a> by ZyPOP</p>
+         </div>
+    </footer>
+</div>
+</body>
+</html>

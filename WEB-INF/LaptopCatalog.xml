@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LaptopCatalog>
+    <laptop id="001" retailer="Apple">
+        <name>MACBOOK</name>
+        <condition>New</condition>
+        <price>399</price>
+		<producttype>Laptops</producttype>
+    </laptop>
+    <laptop id="002" retailer="Dell">
+        <name>STUDIO</name>
+        <condition>Refurbished</condition>
+        <price>299</price>
+		<producttype>Laptops</producttype>
+    </laptop>
+	    <laptop id="003" retailer="Samsung">
+         <name>S7</name>
+        <condition>New</condition>
+        <price>399</price>
+		<producttype>Mobile</producttype>
+    </laptop>
+    <laptop id="004" retailer="Apple">
+        <name>iPhone</name>
+        <condition>New</condition>
+        <price>899</price>
+		<producttype>Mobile</producttype>
+    </laptop>
+	    <laptop id="007" retailer="Apple">
+        <name>IPad</name>
+        <condition>New</condition>
+        <price>399</price>
+		<producttype>Tablets</producttype>
+    </laptop>
+    <laptop id="008" retailer="Microsoft">
+        <name>Surface</name>
+        <condition>New</condition>
+        <price>899</price>
+		<producttype>Tablets</producttype>
+    </laptop>
+	    <laptop id="005" retailer="Samsung">
+        <name>Samsung</name>
+        <condition>New</condition>
+        <price>399</price>
+		<producttype>TVs</producttype>
+    </laptop>
+    <laptop id="006" retailer="LG">
+        <name>SMART</name>
+        <condition>New</condition>
+        <price>899</price>
+		<producttype>TVs</producttype>
+    </laptop>
+	<mobile id="011" retailer="Oneplus">
+        <name>One plus X</name>
+        <condition>New</condition>
+        <price>899</price>
+		<producttype>Mobile</producttype>
+    </mobile>
+	
+</LaptopCatalog>

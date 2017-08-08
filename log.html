@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>
+hdhhd
+</title>
+<body>
+  <form method="post" action="/csj/LoginServlet">
+  <h4>Enter your User ID and Password and click Login</h4>
+  <table cellpadding='2' cellspacing='1'>
+    <tr>
+        <td>User ID</td>
+        <td><input type="text" size="15" name="userid" style= "background-color: white"></input></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="password" size="15" name="password" style= "background-color: white"/></td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <center><input type="submit" value="Login" style= "background-color: white" /></center>
+        </td>
+    </tr>
+	<tr>
+	    <td>Login type</td>
+		<td><input type="radio" name="logintype" value="admin" style= "background-color: white">Admin
+            <input type="radio" name="logintype" value="retailer" style= "background-color: white"> Retailer
+            <input type="radio" name="logintype" value="customer" checked="checked" style= "background-color: white"> Customer
+		</td>
+	</tr>	
+ </table>
+ </form>
+ </body>
+ </html>
+ 
